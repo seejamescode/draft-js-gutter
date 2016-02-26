@@ -1,0 +1,39 @@
+{
+  "name": "draft-js-gutter",
+  "version": "0.0.1",
+  "description": "A component that compliments Draft.js with a line number gutter.",
+  "scripts": {
+    "start": "node devServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yepnamesjames/draft-js-line-numbers.git"
+  },
+  "author": "James Rauhut <jamesrauhut@gmail.com> (https://github.com/yepnamesjames)",
+  "bugs": {
+    "url": "https://github.com/yepnamesjames/draft-js-gutter/issues"
+  },
+  "homepage": "https://github.com/yepnamesjames/draft-js-gutter",
+  "devDependencies": {
+    "babel-core": "^6.3.15",
+    "babel-eslint": "^5.0.0-beta4",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-react-hmre": "^1.0.0",
+    "babel-preset-stage-0": "^6.0.15",
+    "eventsource-polyfill": "^0.9.6",
+    "express": "^4.13.3",
+    "redbox-react": "^1.0.1",
+    "rimraf": "^2.4.3",
+    "webpack": "^1.12.9",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.0.0"
+  },
+  "dependencies": {
+    "draft-js": "^0.1.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.3"
+  }
+}
