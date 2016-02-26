@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { EditorGutter } from '../dist/Draft-js-gutter';
+import { EditorGutter } from './Draft-js-gutter';
 
 ReactDOM.render(<EditorGutter list={{
   compact: true,
