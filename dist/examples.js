@@ -65,12 +65,40 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	_reactDom2.default.render(_react2.default.createElement(_DraftJsGutter.EditorGutter, { list: {
-	    compact: true,
-	    reversed: true,
-	    start: 500,
-	    type: 'A'
-	  } }), document.getElementById('root'));
+	_reactDom2.default.render(_react2.default.createElement(
+	  'div',
+	  null,
+	  _react2.default.createElement(_DraftJsGutter.EditorGutter, {
+	    style: {
+	      border: '1px solid black'
+	    },
+	    styleList: {
+	      background: '#eee'
+	    } }),
+	  _react2.default.createElement('br', null),
+	  _react2.default.createElement(_DraftJsGutter.EditorGutter, {
+	    list: {
+	      type: 'A'
+	    },
+	    style: {
+	      border: '1px solid black'
+	    },
+	    styleList: {
+	      background: '#eee'
+	    } }),
+	  _react2.default.createElement('br', null),
+	  _react2.default.createElement(_DraftJsGutter.EditorGutter, {
+	    list: {
+	      reversed: true,
+	      start: 10
+	    },
+	    style: {
+	      border: '1px solid black'
+	    },
+	    styleList: {
+	      background: '#eee'
+	    } })
+	), document.getElementById('root'));
 
 /***/ },
 /* 2 */
@@ -19712,7 +19740,7 @@
 	
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(EditorGutter).call(this, props));
 	
-	    _this.state = { editorState: _draftJs.EditorState.createEmpty() };
+	    _this.state = { editorState: props.editorState || _draftJs.EditorState.createEmpty() };
 	    return _this;
 	  }
 	
@@ -19728,25 +19756,31 @@
 	
 	      return _react2.default.createElement(
 	        'div',
-	        { style: {
+	        { style: Object.assign(this.props.style, {
 	            display: 'flex'
-	          } },
+	          }) },
 	        _react2.default.createElement(
 	          'ol',
-	          _extends({}, this.props.list, { style: {
+	          _extends({}, this.props.list, {
+	            style: Object.assign(this.props.styleList, {
 	              margin: 0,
 	              padding: 0
-	            } }),
+	            }) }),
 	          [].concat(_toConsumableArray(Array(this.state.editorState.getCurrentContent().getBlockMap().size))).map(function (x, i) {
-	            return _react2.default.createElement('li', { key: i, style: {
+	            return _react2.default.createElement('li', _extends({ key: i
+	            }, _this2.props.listItem, {
+	              style: Object.assign(_this2.props.styleListItem, {
 	                marginLeft: 'calc(' + (_this2.props.start + i).toString().length + ' * .6rem)'
-	              } });
+	              }) }));
 	          })
 	        ),
 	        _react2.default.createElement(
 	          'div',
 	          { style: { flex: 1 } },
-	          _react2.default.createElement(_draftJs.Editor, { editorState: this.state.editorState, onChange: this.onChange.bind(this) })
+	          _react2.default.createElement(_draftJs.Editor, _extends({}, this.props.editor, {
+	            style: this.props.styleEditor,
+	            editorState: this.state.editorState,
+	            onChange: this.onChange.bind(this) }))
 	        )
 	      );
 	    }
@@ -19754,6 +19788,13 @@
 	
 	  return EditorGutter;
 	}(_react.Component);
+	
+	EditorGutter.defaultProps = {
+	  style: {},
+	  styleEditor: {},
+	  styleList: {},
+	  styleListItem: {}
+	};
 
 /***/ },
 /* 161 */
