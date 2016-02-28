@@ -49,6 +49,7 @@ npm run build
 Things that could make this better:
 - [ ] Accept the editor as a child component
 - [ ] Manipulate the editor's onChange to accept a prop and append necessary function
+- [ ] Check line height for each line and apply it to the appropiate gutter text
 - [ ] Default themes for styling
 
 ## License
