@@ -19,6 +19,7 @@ export class EditorGutter extends Component {
   }
 
   render() {
+
     return (
       <div style={Object.assign(this.props.style, {
           display: 'flex'
@@ -32,8 +33,8 @@ export class EditorGutter extends Component {
             <li key={i}
               {...this.props.listItem}
               style={Object.assign(this.props.styleListItem, {
-                marginLeft: `calc(${(this.props.start + i).toString().length} * .6rem)`
-              })}/>
+                listStylePosition: 'inside'
+              })} />
           )}
         </ol>
         <div style={{flex: 1}}>

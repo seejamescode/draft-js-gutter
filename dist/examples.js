@@ -19770,7 +19770,7 @@
 	            return _react2.default.createElement('li', _extends({ key: i
 	            }, _this2.props.listItem, {
 	              style: Object.assign(_this2.props.styleListItem, {
-	                marginLeft: 'calc(' + (_this2.props.start + i).toString().length + ' * .6rem)'
+	                listStylePosition: 'inside'
 	              }) }));
 	          })
 	        ),
