@@ -34,7 +34,7 @@
     "webpack-hot-middleware": "^2.0.0"
   },
   "peerDependencies": {
-    "draft-js": "^0.1.0",
+    "draft-js": "^0.1.0"
   },
   "dependencies": {
     "react": "^0.14.7",
