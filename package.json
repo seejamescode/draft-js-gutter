@@ -2,6 +2,7 @@
   "name": "draft-js-gutter",
   "version": "0.1.0",
   "description": "A component that compliments Draft.js with a line number gutter.",
+  "license": "MIT",
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack.config.dist.js && NODE_ENV=production webpack --config webpack.config.gh-pages.js",
     "start": "node devServer.js"
