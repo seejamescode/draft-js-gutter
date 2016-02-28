@@ -1,6 +1,6 @@
 {
   "name": "draft-js-gutter",
-  "version": "0.1.0",
+  "version": "0.1.01",
   "description": "A component that compliments Draft.js with a line number gutter.",
   "license": "MIT",
   "scripts": {
