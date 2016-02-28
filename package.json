@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yepnamesjames/draft-js-line-numbers.git"
+    "url": "https://github.com/yepnamesjames/draft-js-gutter.git"
   },
   "author": "James Rauhut <jamesrauhut@gmail.com> (https://github.com/yepnamesjames)",
   "bugs": {
