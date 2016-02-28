@@ -1,6 +1,6 @@
 {
   "name": "draft-js-gutter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A component that compliments Draft.js with a line number gutter.",
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack.config.dist.js && NODE_ENV=production webpack --config webpack.config.gh-pages.js",
@@ -32,8 +32,10 @@
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.0.0"
   },
-  "dependencies": {
+  "peerDependencies": {
     "draft-js": "^0.1.0",
+  },
+  "dependencies": {
     "react": "^0.14.7",
     "react-dom": "^0.14.3"
   }
